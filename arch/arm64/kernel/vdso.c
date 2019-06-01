@@ -366,7 +366,7 @@ void update_vsyscall(struct timekeeper *tk)
 							tk->tkr_mono.shift;
 	vdso_data->wtm_clock_sec		= tk->wall_to_monotonic.tv_sec;
 	vdso_data->wtm_clock_nsec		= tk->wall_to_monotonic.tv_nsec;
-
+	
 #ifdef USE_SYSCALL
 	if (!(use_syscall & USE_SYSCALL)) {
 #else
